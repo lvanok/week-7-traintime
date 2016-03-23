@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+	
+<head>
+	<title>Lisa/'s Train Schedule</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+<!-- Style to fix the issue of text extending past panel length -->
+	<style>
+		.panel-body a 
+		{
+		    word-break:break-all;
+		}
+	</style>
+</head>
+
+<body>
+<div class="container">
+	<div class="jumbotron" style="background-color: #20315A ; color: gold;">
+		<h1 class="text-center"><strong><i class="fa fa-newspaper-o"></i>Anytime is Train Time</strong></h1>
+	</div>
+
+<div class="row">
+		<div class="col-sm-12">
+		<br>
+			<!-- First panel is for handling the search parameters -->
+			<div class="panel panel-primary">
+				<div class="panel-heading">
+					<h3 class="panel-title"><strong><i class="fa  fa-list-alt"></i>    Current Train Schedule</strong></h3>
+				</div>
+
+
+
+				
+	<!-- Row for Searching New York Times -->
+	<div class="row">
+		<div class="col-sm-12">
+		<br>
+			<!-- First panel is for handling the search parameters -->
+			<div class="panel panel-primary">
+				<div class="panel-heading">
+					<h3 class="panel-title"><strong><i class="fa  fa-list-alt"></i>   Add Train</strong></h3>
+				</div>
+				<div class="panel-body">
+					<form role="form">
+				  	  <!-- Here we create the text box for capturing the search term-->
+					  <div class="form-group">
+					    <label for="search">Train Name</label>
+					    <input type="text" class="form-control" id="searchTrainName">
+					  </div>
+					  <div class="form-group">
+					    <label for="pwd">Destination</label>
+						<input type="text" class="form-control" id="destCitySelect">
+					   </div>		
+					  <div class="form-group">
+					    <label for="firsttraintime">First Train Time (HHmm - military time)</label>
+						<input type="text" class="form-control" id="firsttimetrain">
+					  </div>
+					  <div class="form-group">
+					    <label for="frequency">Frequency (min)</label>
+						<input type+'text' class="form-control" id="frequency">
+					   </div>
+						</select>			  
+
+					<button type="submit" class="btn btn-default" id="runSearch"><i class="newTrain"></i> Submit</button>
+				</div>
+
+
+    <script src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
+<!-- <script src="moment.js"></script> -->
+
+</body>
+</html>
