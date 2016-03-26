@@ -1,10 +1,9 @@
-<!DOCTYPE html>
 <html lang="en">
-	
 <head>
 	<title>Lisa/'s Train Schedule</title>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+<script src="https://traintime-wk7.firebaseio.com/"></script>
 <!-- Style to fix the issue of text extending past panel length -->
 	<style>
 		.panel-body a 
@@ -29,6 +28,26 @@
 					<h3 class="panel-title"><strong><i class="fa  fa-list-alt"></i>    Current Train Schedule</strong></h3>
 				</div>
 
+	<div class="primary">
+				<div class="primary-body">
+					<table class="table table-hover" id='trainTable'>
+						<thead>
+							<tr>
+								<th>Train Name</th>
+								<th>Destination</th>
+								<th>Frequency(Min)</th>
+								<th>Next Arrival</th>
+								<th>Minutes Away</th>
+								<th></th>
+							</tr>
+						</thead>
+						<tbody>
+							
+						</tbody>
+					</table>
+				</div>
+			</div>
+
 
 
 				
@@ -39,8 +58,10 @@
 			<!-- First panel is for handling the search parameters -->
 			<div class="panel panel-primary">
 				<div class="panel-heading">
-					<h3 class="panel-title"><strong><i class="fa  fa-list-alt"></i>   Add Train</strong></h3>
+					<h3 class="panel-title"><strong><i class="fa  fa-list-alt"></i>    Add Train To Schedule</strong></h3>
 				</div>
+			</div>
+			
 				<div class="panel-body">
 					<form role="form">
 				  	  <!-- Here we create the text box for capturing the search term-->
@@ -53,7 +74,7 @@
 						<input type="text" class="form-control" id="destCitySelect">
 					   </div>		
 					  <div class="form-group">
-					    <label for="firsttraintime">First Train Time (HHmm - military time)</label>
+					    <label for="firsttraintime">First Train Time (HH:mm - military time)</label>
 						<input type="text" class="form-control" id="firsttimetrain">
 					  </div>
 					  <div class="form-group">
@@ -66,8 +87,8 @@
 				</div>
 
 
-    <script src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
-<!-- <script src="moment.js"></script> -->
+<script src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
+<script src="assets/javascript/moment.js"></script>
 
 </body>
 </html>
