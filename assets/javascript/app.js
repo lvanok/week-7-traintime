@@ -56,15 +56,15 @@ trainData.on("child_added", function(childSnapshot, prevChildKey){
 	console.log(frequency);
 
 	//convert first time (push back 1 year to make sure it comes before current time)
-	var firstTimeConverted = moment(firstTime, "HH:mm").subtract(1, "years");
+	var firstTimeConverted = moment.unix(firstTime, "HH:mm").subtract(1, "years");
 	console.log(firstTimeConverted);
 
 	//current time
 	var currentTime = moment();
-	console.log("CURRENT TIME: " + moment(currentTime).format("HH:mm"));
+	console.log("CURRENT TIME: " + moment.unix(currentTime).format("HH:mm"));
 
 	//difference between the times
-	var diffTime = moment().diff(moment(firstTimeConverted), "minutes");
+	var diffTime = moment().diff(moment.unix(firstTimeConverted), "minutes");
 	console.log("DIFFERENCE IN TIME: " + diffTime);
 
 	//time apart (remainder)
