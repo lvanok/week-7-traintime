@@ -1,10 +1,18 @@
-<html lang="en">
-<head>
+<!DOCTYPE html>
+<html lang='en'>
+<head>    
+	<meta charset="UTF-8">
 	<title>Lisa/'s Train Schedule</title>
-    <meta charset="UTF-8">
+<!---****Bootstrap****---->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-<script src="https://traintime-wk7.firebaseio.com/"></script>
-<!-- Style to fix the issue of text extending past panel length -->
+
+<!-- ****** FireBase Src Link ****** -->
+	<script src="https://cdn.firebase.com/js/client/2.4.1/firebase.js"></script>
+
+<!-- var Firebase = require("firebase"); -->
+var trainData = new Firebase("https://traintime-wk7.firebaseio.com/");
+
+
 	<style>
 		.panel-body a 
 		{
@@ -14,11 +22,14 @@
 </head>
 
 <body>
+
+<script src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
+var trainData = new Firebase("https://traintime-wk7.firebaseio.com/");
+<script src="assets/javascript/app.js"></script>
 <div class="container">
 	<div class="jumbotron" style="background-color: #20315A ; color: gold;">
 		<h1 class="text-center"><strong><i class="fa fa-newspaper-o"></i>Anytime is Train Time</strong></h1>
 	</div>
-
 <div class="row">
 		<div class="col-sm-12">
 		<br>
@@ -28,7 +39,7 @@
 					<h3 class="panel-title"><strong><i class="fa  fa-list-alt"></i>    Current Train Schedule</strong></h3>
 				</div>
 
-	<div class="primary">
+			<div class="primary">
 				<div class="primary-body">
 					<table class="table table-hover" id='trainTable'>
 						<thead>
@@ -38,7 +49,6 @@
 								<th>Frequency(Min)</th>
 								<th>Next Arrival</th>
 								<th>Minutes Away</th>
-								<th></th>
 							</tr>
 						</thead>
 						<tbody>
@@ -49,9 +59,6 @@
 			</div>
 
 
-
-				
-	<!-- Row for Searching New York Times -->
 	<div class="row">
 		<div class="col-sm-12">
 		<br>
@@ -85,10 +92,11 @@
 
 					<button type="submit" class="btn btn-default" id="runSearch"><i class="newTrain"></i> Submit</button>
 				</div>
+</div>
 
 
-<script src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
 <script src="assets/javascript/moment.js"></script>
+<script src="app.js"></script>
 
 </body>
 </html>

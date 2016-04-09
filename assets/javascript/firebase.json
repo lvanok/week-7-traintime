@@ -1,0 +1,9 @@
+{
+  "firebase": "rcb-week7_files-week-7-traintime",
+  "public": "public",
+  "ignore": [
+    "firebase.json",
+    "**/.*",
+    "**/node_modules/**"
+  ]
+}
